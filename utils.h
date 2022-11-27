@@ -30,3 +30,16 @@
         #define BAR_EMPTY 176
         #define PRINTBAR(x) printf("%c", x)
     #endif
+    
+    // CURSOR MOVEMENT MACROS
+    #define MOVE_CUR(x,y) "\033["#x";"#y"H"
+    #define MOVE_CUR_UP(y) "\033["#y"A"
+    #define MOVE_CUR_DOWN(y) "\033["#y"B"
+    #define MOVE_CUR_RIGHT(x) "\033["#x"C"
+    #define MOVE_CUR_LEFT(x) "\033["#x"D"
+
+    #define SAVE_CUR_POS "\033[s"
+    #define RESTORE_CUR_POS "\033[u"
+
+    #define CLEAR_SCREEN "\033[2J"
+    #define RESET_CURSOR "\033[H"
