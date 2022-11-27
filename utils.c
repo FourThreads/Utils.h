@@ -2,7 +2,7 @@
  * STUDENTS:    Buda Francesco, Ceredi Tommaso, Maglia Danilo, Severi Tommaso
  * DATE:    	15/11/2021
  * FILE:        utils.c
- * DESCRIPTION: IMPLEMENTATION OF LIBRARY "utils". 
+ * DESCRIPTION: IMPLEMENTATION OF LIBRARY "utils".
  *              FOR DEFINITION SEE "utils.h"
  * VERSIONE:    1.5
  */
