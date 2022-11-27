@@ -2,7 +2,7 @@
  * STUDENTS:    Buda Francesco, Ceredi Tommaso, Maglia Danilo, Severi Tommaso
  * DATE:        11/15/2021
  * FILE:        utils.h
- * DESCRIPTION: INTERFACE FOR THE "utils" LIBRARY. THIS HEADER
+ * DESCRIPTION: INTERFACE FOR THE "utils" LIBRARY. THIS HEADER 
  *              CONTAINS DEFINITIONS OF FUNCTIONS THAT OFTEN HAPPEN
  *              TO USE IN DIFFERENT PROGRAMS.
  *              ALSO THE HEADER DEFINES MACROS TO IMPROVE
