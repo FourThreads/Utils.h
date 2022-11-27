@@ -30,7 +30,7 @@
         #define BAR_EMPTY 176
         #define PRINTBAR(x) printf("%c", x)
     #endif
-    
+
     // CURSOR MOVEMENT MACROS
     #define MOVE_CUR(x,y) "\033["#x";"#y"H"
     #define MOVE_CUR_UP(y) "\033["#y"A"
@@ -43,3 +43,18 @@
 
     #define CLEAR_SCREEN "\033[2J"
     #define RESET_CURSOR "\033[H"
+
+    // COLOR MACROS
+    #define CON_RESET "\033[0m"
+    #define COLOR_GREEN "\033[32m"
+    #define COLOR_BLACK "\e[0;30m"
+    #define COLOR_RED "\e[0;31m"
+    #define COLOR_YELLOW "\e[0;33m"
+    #define COLOR_BLUE "\e[0;34m"
+    #define COLOR_MAGENTA "\e[0;35m"
+    #define COLOR_CYANO "\e[0;36m"
+    #define COLOR_WHITE "\e[0;37m"
+
+    #ifndef MAX_STRING_SIZE
+        #define MAX_STRING_SIZE 100
+    #endif
