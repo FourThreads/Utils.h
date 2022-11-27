@@ -45,3 +45,22 @@ void flushStdin(){
         c = getchar();
     } while(c != '\n' && c != EOF);
 }
+
+// --------ESCAPE SEQUENCE FUNCTIONS--------
+void initEscapeSequence(){
+    #ifdef NEED_COLOR_FIX
+        HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+        if(handle != INVALID_HANDLE_VALUE){
+            DWORD mode =  0;
+            if (GetConsoleMode(handle, &mode)) {
+                mode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+                SetConsoleMode(handle, mode);
+            }
+        }
+    #endif
+}
+
+void clearScreen(){
+    printf("%s", CLEAR_SCREEN);
+    printf("%s", RESET_CURSOR);
+}
