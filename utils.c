@@ -111,3 +111,33 @@ void coloredMessage(char* color, char* message){
     printf("%s", message);
     resetColor();
 }
+
+// --------RANDOM GENERATION FUNCTIONS--------
+
+/*
+    Description:
+        Function that initializes the random generation
+        numbers by setting the seed to time(NULL).
+*/
+void initRandom(){
+    srand(time(NULL));
+}
+
+/*
+    Description:
+        Function that generates a random number in the
+        specified range.
+    Arguments:
+        int min = minimum of range
+        int max = maximum of the range
+    Returns:
+        int: Random number generated
+*/
+int randomIntRange(int min, int max){
+    if(min > max){
+        int tmp = max;
+        max = min;
+        min = tmp;
+    }
+    return (rand() % (max - min + 1)) + min;
+}
