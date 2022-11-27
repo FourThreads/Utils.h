@@ -58,3 +58,41 @@
     #ifndef MAX_STRING_SIZE
         #define MAX_STRING_SIZE 100
     #endif
+
+    // ESCAPE SEQUENCE FUNCTIONS
+    void initEscapeSequence();
+    void clearScreen();
+
+    // INPUT FUNCTIONS
+    void stralloc(char** str);
+    void fstralloc(char**, FILE*);
+    void flushStdin();
+
+    // CURSOR MOVEMENT FUNCTIONS
+    void moveCursor(int x, int y);
+    void moveCurUp(int y);
+    void moveCurDown(int y);
+    void moveCurRight(int x);
+    void moveCurLeft(int x);
+    void saveCurPos();
+    void restoreCurPos();
+    
+    // COLOR FUNCTIONS
+    void setColor(char* color);
+    void resetColor();
+    void coloredMessage(char* color, char* message);
+
+    // RANDOM GENERATION FUNCTIONS
+    void initRandom();
+    int randomIntRange(int min, int max);
+
+    // ARRAY FUNCTIONS
+    bool existsInt(int* v, int n, int size);
+    bool existsFloat(float* v, float n, int size);
+    void printArrayInt(int* v, int size);
+    void printArrayFloat(float* v, float size);
+
+    // BAR PROGRESSION FUNCTION
+    void progress(int perc);
+
+#endif
