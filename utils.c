@@ -64,3 +64,50 @@ void clearScreen(){
     printf("%s", CLEAR_SCREEN);
     printf("%s", RESET_CURSOR);
 }
+
+// --------CURSOR FUNCTIONS--------
+
+void moveCursor(int x, int y){
+    printf("%s", MOVE_CUR(x,y));
+}
+void moveCurUp(int y){
+    printf("%s", MOVE_CUR_UP(y));
+}
+void moveCurDown(int y){
+    printf("%s", MOVE_CUR_DOWN(y));
+}
+void moveCurRight(int x){
+    printf("%s", MOVE_CUR_RIGHT(x));
+}
+void moveCurLeft(int x){
+    printf("%s", MOVE_CUR_LEFT(x));
+}
+void saveCurPos(){
+    printf("%s", SAVE_CUR_POS);
+}
+void restoreCurPos(){
+    printf("%s", RESTORE_CUR_POS);
+}
+
+// --------COLOR FUNCTIONS--------
+
+void setColor(char* color){
+    printf("%s", color);
+}
+
+void resetColor(){
+    setColor(CON_RESET);
+}
+
+/*
+    Description:
+        Function that prints a colored message
+    Arguments:
+        char*: color of the message
+        char*: contenuto of the message
+*/
+void coloredMessage(char* color, char* message){
+    setColor(color);
+    printf("%s", message);
+    resetColor();
+}
